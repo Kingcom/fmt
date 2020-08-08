@@ -3502,6 +3502,8 @@ detail::buffer_appender<Char> detail::vformat_to(
 #ifndef FMT_HEADER_ONLY
 extern template format_context::iterator detail::vformat_to(
     detail::buffer<char>&, string_view, basic_format_args<format_context>);
+extern template wformat_context::iterator detail::vformat_to(
+		detail::buffer<wchar_t>&, wstring_view, basic_format_args<wformat_context>);
 namespace detail {
 extern template FMT_API std::string grouping_impl<char>(locale_ref loc);
 extern template FMT_API std::string grouping_impl<wchar_t>(locale_ref loc);
